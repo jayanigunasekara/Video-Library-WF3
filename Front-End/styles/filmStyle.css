@@ -1,0 +1,43 @@
+#section{
+    background: rgb(72,44,175);
+    background: linear-gradient(90deg, rgba(72,44,175,1) 0%, rgba(101,97,233,1) 0%, rgba(148,232,232,1) 69%);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+    opacity: 1;
+    transition: all 150ms ease-in-out; 
+    
+
+}
+
+#section:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.myBtn{
+    background-color: rgb(9, 9, 128);
+    color: white;
+    border-radius: 4px;
+}
+
+.myBtn :hover{
+    background-color: rgb(193, 193, 237);
+}
+
+img{
+    
+    width: 250px;
+    height:300px;
+
+    
+}
