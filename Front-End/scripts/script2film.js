@@ -1,11 +1,8 @@
 //use window location search
 const urlParameter = new URLSearchParams(window.location.search);// id returns ?id=2e2dd90b-ae86-4a9b-bd22-3b261a6add8a:Error
-const currentId = urlParameter.get('id').split(":")[0];//get the first element in the array separating by : . 
+const currentId = urlParameter.get('id').split(":")[0];//get the first element in the array separating by ':' . 
 
 
-
-// console.log(window.location.search);
-// console.log(currentId);
 
 //Fetch data from the API  with url search parameter
 

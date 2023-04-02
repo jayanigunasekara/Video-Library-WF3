@@ -1,5 +1,5 @@
 let videoLib = [];
-//let url = "http://localhost:3000/api/movies";
+
 
 
 //fetch data from the API
@@ -13,24 +13,15 @@ fetch("http://localhost:3000/api/movies")
     console.log("Jayani");
     data.map(e =>{
 
-        let id =  e._id;
-        let name =  e.titre;
-        let director =  e.realisateur;
-        let duration =  e.dureeTotale;
-        let duration_viewed  =  e.duration_viewed;
-        let description  =  e.description;
-        let image = e.imageUrl;
-        let filePath  =  e.videoUrl;
-
         videoLib.push({
-            id: id,
-            name :name,
-            director: director,
-            image: image,
-            duration: duration,
-            duration_viewed : duration_viewed,
-            description : description,
-            filePath : filePath
+            id: e._id,
+            name :e.titre,
+            director: e.realisateur,
+            image: e.imageUrl,
+            duration: e.dureeTotale,
+            duration_viewed : e.duration_viewed,
+            description : e.description,
+            filePath : e.videoUrl
 
         });
 
@@ -50,8 +41,8 @@ fetch("http://localhost:3000/api/movies")
         return template;
     }
     
-    //templateElement('h1', 'Video Library', document.body);
-    let totalViewingTime = 0;
+    
+
     
     function timeConvert(n) {
         var num = n;
@@ -62,6 +53,7 @@ fetch("http://localhost:3000/api/movies")
         return  + rhours + " hour(s) and " + rminutes + " minute(s).";
     }
 
+    //get the sections
     const section1= document.querySelector('#section1');
     const section2 = document.querySelector('#section2');
     const section3 = document.querySelector('#section3')
@@ -151,16 +143,13 @@ fetch("http://localhost:3000/api/movies")
     
         }
         div.setAttribute("id", "section");
-     /*    document.querySelector('div').style.display = 'flex';
-        document.querySelector('div').style.flexDirection = 'column';
-        document.querySelector('div').style.justifyContent = 'center'; */
+
      
         
     
     
         x++;
-        //console.log("button Id         ",buttonId);
-        //console.log('x                ',x);
+  
         buttonId++;
     
     
